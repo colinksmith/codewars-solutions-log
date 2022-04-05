@@ -1,0 +1,979 @@
+8 kyu
+Implement Array.prototype.filter()
+JavaScript:
+Array.prototype.filter = function (func) {
+  let arr = []
+  for (let i = 0; i < this.length; i++){
+      if (func(this[i]) === true) {
+        arr.push(this[i])
+      }
+    }
+  return arr
+}
+19 hours agoRefactor
+8 kyu
+Grasshopper - Terminal Game Turn Function
+JavaScript:
+function doTurn () {
+  rollDice()
+  move()
+  combat()
+  getCoins()
+  buyHealth()
+  printStatus()
+}
+19 hours agoRefactorDiscuss
+8 kyu
+Push a hash/an object into array
+JavaScript:
+items = []
+items.push({a: "b", c: "d"})
+19 hours agoRefactorDiscuss
+8 kyu
+Take an Arrow to the knee, Functionally
+JavaScript:
+var ArrowFunc = function(arr) {
+  return arr.map(x => String.fromCharCode(x) ).join(''); //Complete this function
+}
+19 hours agoRefactorDiscuss
+8 kyu
+Basic Training: Add item to an Array
+JavaScript:
+// add the value "codewars" to the already defined websites array
+websites.push('codewars')
+20 hours agoRefactorDiscuss
+8 kyu
+pick a set of first elements
+JavaScript:
+function first(arr, n) {
+  if (typeof(n) !== 'number') {
+    n = 1
+  }
+  return arr.slice(0, n)
+}
+2 days agoRefactorDiscuss
+8 kyu
+Enumerable Magic #1 - True for All?
+JavaScript:
+function all( arr, fun ){
+  for (let i = 0; i < arr.length; i++){
+    if (!fun(arr[i])) {
+      return false
+    }
+  }
+  return true 
+}
+2 days agoRefactorDiscuss
+8 kyu
+CSV representation of array
+JavaScript:
+function toCsvText(array) {
+  let output = ''
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array[i].length; j++) {
+      output += array[i][j]
+      if (j < array[i].length - 1) {
+        output += ','
+      }
+    }
+    if (i < array.length - 1) {
+      output += '\n'
+    }
+  }
+  return output
+}
+2 days agoRefactorDiscuss
+8 kyu
+UEFA EURO 2016
+JavaScript:
+function uefaEuro2016(teams, scores){
+  if (scores[0] > scores[1]) {
+    return `At match ${teams[0]} - ${teams[1]}, ${teams[0]} won!`
+  } else if (scores[1] > scores[0]) {
+    return `At match ${teams[0]} - ${teams[1]}, ${teams[1]} won!`
+  } else {
+    return `At match ${teams[0]} - ${teams[1]}, teams played draw.`
+  }
+}
+2 days agoRefactor
+8 kyu
+Duck Duck Goose
+JavaScript:
+function duckDuckGoose(players, goose) {
+  let gooseNumber = goose % players.length || players.length
+  return players[gooseNumber - 1].name
+}
+2 days agoRefactorDiscuss
+8 kyu
+Is there a vowel in there?
+JavaScript:
+function isVow(a){
+    let codes = {
+      97: 'a',
+      101: 'e',
+      105: 'i',
+      111: 'o',
+      117: 'u',
+    }
+    return a.map((x) => codes[x] ? codes[x] : x)
+  }
+3 days agoRefactorDiscuss
+8 kyu
+Sum of differences in array
+JavaScript:
+function sumOfDifferences(arr) {
+  arr.reverse().sort((a, b) => b - a)
+  let sum = 0
+  for (let i = 0; i < arr.length - 1; i++) {
+    let diff = (arr[i] - arr[i + 1])
+    sum += diff
+  }
+  return sum
+}
+3 days agoRefactorDiscuss
+8 kyu
+Printing Array elements with Comma delimiters
+JavaScript:
+function printArray(array){
+  return array.join(',')
+}
+3 days agoRefactorDiscuss
+8 kyu
+Remove First and Last Character Part Two
+JavaScript:
+function array(arr){
+    let arr1 = arr.split(',')
+    if (arr1.length <= 2) return null
+    arr1.pop()
+    arr1.shift()
+    return arr1.join(' ')
+  }
+3 days agoRefactorDiscuss
+8 kyu
+Swap Values
+JavaScript:
+function swapValues(args) {
+//     var args = Array.prototype.slice.call(arguments);
+    var temp = args[0];
+    args[0] = args[1];
+    args[1] = temp;
+  return args
+}
+3 days agoRefactorDiscuss
+8 kyu
+No Loops 2 - You only need one
+JavaScript:
+function check(a,x){
+  return a.includes(x)
+};
+3 days agoRefactorDiscuss
+8 kyu
+Find the Difference in Age between Oldest and Youngest Family Members
+JavaScript:
+function differenceInAges(ages){
+  let min = Math.min(...ages)
+  let max = Math.max(...ages)
+  let diff = max - min
+  return [min, max, diff]
+}
+3 days agoRefactorDiscuss
+8 kyu
+Grasshopper - Array Mean
+JavaScript:
+var findAverage = function (nums) {
+  let sum = nums.reduce((sum, val) => sum + val, 0)
+  return sum / nums.length
+}
+3 days agoRefactorDiscuss
+8 kyu
+Add Length
+JavaScript:
+function addLength(str) {
+  return str.split(' ').map((x) => x + ` ${x.length}`)
+}
+3 days agoRefactorDiscuss
+8 kyu
+Multiple of index
+JavaScript:
+function multipleOfIndex(array) {
+  return array.filter((x, i) => x % i === 0)
+}
+3 days agoRefactorDiscuss
+8 kyu
+A wolf in sheep's clothing
+JavaScript:
+function warnTheSheep(queue) {
+  if (queue[queue.length - 1] === 'wolf') {return 'Pls go away and stop eating my sheep'}
+  else {return `Oi! Sheep number ${queue.length - queue.indexOf('wolf') - 1}! You are about to be eaten by a wolf!`}
+  
+}
+4 days agoRefactorDiscuss
+8 kyu
+SpeedCode #2 - Array Madness
+JavaScript:
+function arrayMadness(a, b) {
+  let aSum = a.reduce((sum, val) => sum + val ** 2, 0)
+  let bCube = b.reduce((cube, val) => cube + val ** 3, 0)
+  return aSum > bCube
+}
+4 days agoRefactorDiscuss
+8 kyu
+Filling an array (part 1)
+JavaScript:
+const arr = (N = 0) => {
+  let output = []
+  for (let i = 0; i < N; i++) {
+    output.push(i)
+  }
+  return output
+};
+4 days agoRefactorDiscuss
+8 kyu
+To square(root) or not to square(root)
+JavaScript:
+function squareOrSquareRoot(array) {
+  return array.map((x) => Number.isInteger(Math.sqrt(x)) ? Math.sqrt(x) : x ** 2)
+}
+4 days agoRefactorDiscuss
+8 kyu
+My head is at the wrong end!
+JavaScript:
+function fixTheMeerkat(arr) {
+  return arr.reverse()
+}
+4 days agoRefactorDiscuss
+8 kyu
+Well of Ideas - Easy Version
+JavaScript:
+function well(x){
+    x = x.filter(x => x === 'good')
+    if (x.length === 1 || x.length === 2) {
+      return 'Publish!'
+    } else if (x.length > 2) {
+      return 'I smell a series!'
+    } else {
+      return 'Fail!'
+    }
+  }
+5 days agoRefactorDiscuss
+8 kyu
+Filter out the geese
+JavaScript:
+function gooseFilter (birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  return birds.filter((x) => !geese.includes(x))
+  // return an array containing all of the strings in the input array except those that match strings in geese
+};
+5 days agoRefactorDiscuss
+8 kyu
+I love you, a little , a lot, passionately ... not at all
+JavaScript:
+function howMuchILoveYou(nbPetals) {
+    let remainder = nbPetals % 6 
+    if (remainder === 1) {
+      return 'I love you'
+    } else if(remainder === 2) {
+      return 'a little'
+    } else if(remainder === 3) {
+      return 'a lot'
+    } else if(remainder === 4) {
+      return 'passionately'
+    } else if(remainder === 5) {
+      return 'madly'
+    } else {
+      return 'not at all'
+    }
+}
+5 days agoRefactorDiscuss
+8 kyu
+Sort and Star
+JavaScript:
+function twoSort(s) {
+  s = s.sort()
+  return s[0].split('').join('***')
+}
+5 days agoRefactorDiscuss
+8 kyu
+Removing Elements
+JavaScript:
+function removeEveryOther(arr){
+  let output = []
+  arr.forEach((element, index) => {
+    if (index % 2 === 0) {
+      output.push(element)
+    }
+  })
+  return output
+}
+5 days agoRefactorDiscuss
+8 kyu
+Find numbers which are divisible by given number
+JavaScript:
+function divisibleBy(numbers, divisor){
+  return numbers.filter((x) => x % divisor === 0)
+}
+5 days agoRefactorDiscuss
+8 kyu
+Find the first non-consecutive number
+JavaScript:
+function firstNonConsecutive (arr) {
+    let count = 0
+    let arrayIndex = 0
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] !== arr[0] + count) {
+        arrayIndex = i
+        break
+      }
+      count++
+    }
+    if (arrayIndex === 0) {
+        return (arr, null)
+    }
+    return (arr, arr[arrayIndex])
+  }
+5 days agoRefactorDiscuss
+8 kyu
+Rock Paper Scissors!
+JavaScript:
+const rps = (p1, p2) => {
+  if (p1 === p2) {
+    return 'Draw!'
+  } else if (p1 === 'paper' && p2 === 'scissors' ||
+             p1 === 'scissors' && p2 === 'rock' ||
+             p1 === 'rock' && p2 === 'paper') {
+    return 'Player 2 won!'
+  } else {
+    return 'Player 1 won!'
+  }
+};
+5 days agoRefactorDiscuss
+8 kyu
+Convert a string to an array
+JavaScript:
+function stringToArray(string){
+
+  return string.split(' ')
+
+}
+5 days agoRefactorDiscuss
+8 kyu
+Sentence Smash
+JavaScript:
+function smash (words) {
+   return words.join(' ')
+};
+5 days agoRefactorDiscuss
+8 kyu
+Count by X
+JavaScript:
+function countBy(x, n) {
+  let z = [];
+  for (let i = 1; i <= n; i++) {
+    z.push(x * i)
+  }
+  return z;
+}
+5 days agoRefactorDiscuss
+8 kyu
+Sum Mixed Array
+JavaScript:
+function sumMix(x){
+  return x.reduce((sum, val) => {
+    return Number(val) + sum
+  }, 0)
+}
+5 days agoRefactorDiscuss
+8 kyu
+If you can't sleep, just count sheep!!
+JavaScript:
+var countSheep = function (num){
+  let output = ''
+  for (let i = 1; i <= num; i++) {
+    output += `${i} sheep...`
+  }
+  return output
+}
+5 days agoRefactorDiscuss
+8 kyu
+Are You Playing Banjo?
+JavaScript:
+function areYouPlayingBanjo(name) {
+  if (name[0].toLowerCase() === 'r') {
+    return name + ' plays banjo'
+  } else {
+    return name + ' does not play banjo'
+  }
+}
+5 days agoRefactorDiscuss
+8 kyu
+Will you make it?
+JavaScript:
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  return mpg * fuelLeft >= distanceToPump ? true : false
+};
+5 days agoRefactorDiscuss
+8 kyu
+Sum Arrays
+JavaScript:
+// Sum Numbers
+function sum (numbers) {
+    "use strict";
+    return numbers.reduce((sum, val) => sum + val, 0)
+    
+};
+5 days agoRefactorDiscuss
+8 kyu
+Total amount of points
+JavaScript:
+function points(games) {
+  games = games.map((x) => x.split(':'))
+  return games.reduce((sum, val) => {
+    if (val[0] > val[1]) {
+      return sum + 3
+    } else if (val[0] === val[1]) {
+      return sum + 1
+    } else {
+      return sum
+    }
+  }, 0)
+}
+5 days agoRefactorDiscuss
+8 kyu
+Count the Monkeys!
+JavaScript:
+function monkeyCount(n) {
+  count = []
+  for (let i = 1; i <= n; i++) {
+    count.push(i)
+  }
+  return count
+}
+5 days agoRefactorDiscuss
+8 kyu
+How good are you really?
+JavaScript:
+function betterThanAverage(classPoints, yourPoints) {
+  classAve = classPoints.reduce((sum, val) => sum + val, 0) / classPoints.length
+  return yourPoints > classAve ? true : false
+}
+5 days agoRefactorDiscuss
+8 kyu
+Simple multiplication
+JavaScript:
+function simpleMultiplication(number) {
+    return number % 2 === 0 ? number * 8 : number * 9
+}
+5 days agoRefactorDiscuss
+8 kyu
+Sum without highest and lowest number
+JavaScript:
+function sumArray(array) {
+    if (!array || typeof array !== 'object' || array.length <= 2) {
+      return 0
+    }
+    let max = Math.max(...array)
+    array.splice(array.indexOf(max), 1)
+    let min = Math.min(...array)
+    array.splice(array.indexOf(min), 1)
+    let sum = array.reduce((sum, val) => sum + val, 0)
+    return sum
+  }
+5 days agoRefactorDiscuss
+8 kyu
+DNA to RNA Conversion
+JavaScript:
+function DNAtoRNA(dna) {
+  return dna.split('').map((x) => x === 'T' ? 'U' : x).join('')
+}
+5 days agoRefactorDiscuss
+8 kyu
+Do I get a bonus?
+JavaScript:
+function bonusTime(salary, bonus) {
+  if (bonus) salary *= 10
+  return `£${salary}`
+}
+5 days agoRefactorDiscuss
+8 kyu
+Beginner - Reduce but Grow
+JavaScript:
+function grow(x){
+  return x.reduce((product, val) => product * val ,1)
+}
+5 days agoRefactorDiscuss
+8 kyu
+Is he gonna survive?
+JavaScript:
+function hero(bullets, dragons){
+  return bullets / 2 / dragons >= 1 ? true : false
+}
+5 days agoRefactorDiscuss
+8 kyu
+Array plus array
+JavaScript:
+function arrayPlusArray(arr1, arr2) {
+  return arr1.concat(arr2).reduce((sum, val) => sum + val); //something went wrong
+}
+5 days agoRefactorDiscuss
+8 kyu
+Calculate BMI
+JavaScript:
+function bmi(weight, height) {
+  let num = weight / height **2
+  if (num <= 18.5) {return 'Underweight'}
+  else if (num <= 25) {return 'Normal'}
+  else if (num <= 30) {return 'Overweight'}
+  else {return 'Obese'}
+}
+5 days agoRefactorDiscuss
+8 kyu
+Convert a Boolean to a String
+JavaScript:
+function booleanToString(b){
+  return String(b)
+}
+5 days agoRefactorDiscuss
+8 kyu
+Beginner Series #1 School Paperwork
+JavaScript:
+function paperwork(n, m) {
+  if (n < 0 || m < 0) return 0
+  let product = n * m
+  return product
+}
+5 days agoRefactorDiscuss
+8 kyu
+Get the mean of an array
+JavaScript:
+function getAverage(marks){
+  let sum = marks.reduce((sum, val) => sum + val, 0)
+  return Math.floor(sum / marks.length)
+}
+5 days agoRefactorDiscuss
+8 kyu
+Reversed sequence
+JavaScript:
+const reverseSeq = n => {
+  const array = []
+  for (let i = n; i > 0; i--) {
+    array.push(i)
+  }
+  return array
+};
+5 days agoRefactorDiscuss
+8 kyu
+Jenny's secret message
+JavaScript:
+function greet(name){
+  if(name === "Johnny")
+    return "Hello, my love!";
+  return "Hello, " + name + "!";
+
+}
+5 days agoRefactorDiscuss
+8 kyu
+Calculate average
+JavaScript:
+function find_average(array) {
+  if (typeof array !== 'object' || array.length === 0) {
+    return 0
+  }
+  let sum = array.reduce((sum, val) => {
+    return sum + val
+  }, 0)
+  return sum / array.length
+}
+5 days agoRefactorDiscuss
+8 kyu
+You only need one - Beginner
+JavaScript:
+function check(a, x) {
+  return a.includes(x)
+}
+5 days agoRefactorDiscuss
+8 kyu
+Reversed Words
+JavaScript:
+function reverseWords(str){
+  return str.split(' ').reverse().join(' ')
+}
+5 days agoRefactorDiscuss
+8 kyu
+Count of positives / sum of negatives
+JavaScript:
+function countPositivesSumNegatives(input) {
+  if (input === null) return []
+  const positiveInput = []
+  const negativeInput = []
+  input.forEach((x) => x > 0 ? positiveInput.push(x) : negativeInput.push(x))
+  let negativeSum = negativeInput.reduce((acc, val) => acc + val, 0)
+  if (positiveInput.length === 0 && negativeSum === 0) {
+    return []
+  }
+  return [positiveInput.length, negativeSum]
+}
+6 days agoRefactorDiscuss
+8 kyu
+Beginner - Lost Without a Map
+JavaScript:
+function maps(x){
+  return x.map(x => x * 2)
+}
+6 days agoRefactorDiscuss
+8 kyu
+A Needle in the Haystack
+JavaScript:
+function findNeedle(haystack) {
+  // your code here
+  let position = haystack.indexOf('needle')
+  return `found the needle at position ${position}`
+}
+6 days agoRefactorDiscuss
+8 kyu
+Abbreviate a Two Word Name
+JavaScript:
+function abbrevName(name){
+    let splitName = name.split(' ')
+    let a = splitName[0][0].toUpperCase() 
+    let b = splitName[1][0].toUpperCase()
+    return `${a}.${b}`
+}
+6 days agoRefactorDiscuss
+8 kyu
+Returning Strings
+JavaScript:
+function greet(name){
+  //your code here
+  return `Hello, ${name} how are you doing today?`
+}
+7 days agoRefactorDiscuss
+8 kyu
+Function 1 - hello world
+JavaScript:
+// Write a function "greet" that returns "hello world!"
+function greet() {
+  return 'hello world!'
+}
+7 days agoRefactorDiscuss
+8 kyu
+Basic Mathematical Operations
+JavaScript:
+function basicOp(operation, value1, value2){
+  switch (operation) {
+      case '+':
+        return value1 + value2
+      case '-':
+        return value1 - value2
+      case '*':
+        return value1 * value2
+      case '/':
+        return value1 / value2
+  }
+}
+8 days agoRefactorDiscuss
+8 kyu
+Keep Hydrated!
+JavaScript:
+function litres(time) {
+  return parseInt(time / 2)
+}
+9 days agoRefactorDiscuss
+8 kyu
+Century From Year
+JavaScript:
+function century(year) {
+    return Math.ceil(year / 100)
+}
+9 days agoRefactorDiscuss
+8 kyu
+Is n divisible by x and y?
+JavaScript:
+function isDivisible(n, x, y) {
+  return (n % x === 0  && n % y === 0) ? true : false
+}
+9 days agoRefactorDiscuss
+8 kyu
+Multiply
+Python:
+def multiply(a, b):
+  return a * b
+8 months agoRefactor
+JavaScript:
+function multiply(a, b){
+  return a * b
+}
+9 days agoRefactorDiscuss
+8 kyu
+Counting sheep...
+JavaScript:
+function countSheeps(arrayOfSheep) {
+  // TODO May the force be with you
+  const numOfSheep = arrayOfSheep.reduce((prev, curr) => {
+    if (curr) prev++
+    return prev
+  }, 0)
+  return numOfSheep
+}
+10 days agoRefactorDiscuss
+8 kyu
+Remove String Spaces
+JavaScript:
+function noSpace(x){
+  let xArray = x.split(' ')
+  xArray.forEach((e, i) => e.trim())
+  return xArray.join('')
+}
+11 days agoRefactorDiscuss
+8 kyu
+String repeat
+JavaScript:
+function repeatStr (n, s) {
+  let summedStr = ''
+  for (let i = 0; i < n; i++) {
+    summedStr += s
+  }
+  return summedStr
+}
+11 days agoRefactorDiscuss
+8 kyu
+Convert a Number to a String!
+JavaScript:
+function numberToString(num) {
+  // Return a string of the number here!
+  return String(num)
+}
+11 days agoRefactorDiscuss
+8 kyu
+Convert boolean values to strings 'Yes' or 'No'.
+JavaScript:
+function boolToWord( bool ){
+  //...
+  return bool ? 'Yes' : 'No'
+}
+11 days agoRefactorDiscuss
+8 kyu
+Remove First and Last Character
+JavaScript:
+function removeChar(str){
+ //You got this!
+  return str.slice(1, -1)
+};
+
+
+
+11 days agoRefactorDiscuss
+8 kyu
+Opposite number
+JavaScript:
+function opposite(number) {
+  //your code here
+  return -number
+}
+11 days agoRefactorDiscuss
+8 kyu
+Return Negative
+JavaScript:
+function makeNegative(num) {
+  // Code?
+  return num < 0 ? num : -num
+}
+11 days agoRefactorDiscuss
+8 kyu
+Sum of positive
+JavaScript:
+function positiveSum(arr) {
+  return arr.reduce((prevVal, currVal) => {
+    if (currVal > 0) {
+      return prevVal + currVal
+    } else {
+      return prevVal
+    }
+  }, 0)
+}
+11 days agoRefactorDiscuss
+8 kyu
+Function 3 - multiplying two numbers
+JavaScript:
+// Write here your multiply-function
+function multiply(a, b) {
+  return a * b
+}
+11 days agoRefactorDiscuss
+8 kyu
+Can we divide it?
+JavaScript:
+function isDivideBy(number, a, b) {
+  // good luck
+  if (number % a === 0 && number % b === 0) {
+    return true
+  } else {
+    return false
+  }
+}
+11 days agoRefactorDiscuss
+8 kyu
+Merge two sorted arrays into one
+JavaScript:
+function mergeArrays(arr1, arr2) {
+  let newArray = [...arr1, ...arr2]
+  let finalArray = newArray.filter((element, index) => {
+    return newArray.indexOf(element) == index
+  })
+  return finalArray.sort((a, b) => a - b)
+}
+12 days agoRefactorDiscuss
+8 kyu
+MakeUpperCase
+JavaScript:
+function makeUpperCase(str) {
+  // Code here
+  return str.toUpperCase()
+}
+13 days agoRefactorDiscuss
+8 kyu
+Convert number to reversed array of digits
+JavaScript:
+function digitize(n) {
+    //code here
+    return String(n).split('').reverse().map(Number)
+  }
+13 days agoRefactorDiscuss
+8 kyu
+Even or Odd
+JavaScript:
+function even_or_odd(number) {
+  return number % 2 === 0 ? 'Even' : 'Odd'
+}
+14 days agoRefactorDiscuss
+8 kyu
+Invert values
+JavaScript:
+function invert(array) {
+  return array.map(x => x * -1);
+}
+14 days agoRefactorDiscuss
+8 kyu
+Find Maximum and Minimum Values of a List
+JavaScript:
+var min = function(list){
+    
+    return Math.min(...list);
+}
+
+var max = function(list){
+    
+    return Math.max(...list);
+}
+14 days agoRefactor
+var min = function(list){
+    let minNum = list.reduce(
+      (previousVal, currentVal) => previousVal > currentVal ? currentVal : previousVal
+    )
+    return minNum;
+}
+
+var max = function(list){
+    let maxNum = list.reduce(
+      (previousVal, currentVal) => previousVal > currentVal ? previousVal : currentVal
+    )
+    return maxNum;
+}
+15 days agoRefactorDiscuss
+8 kyu
+Beginner Series #2 Clock
+JavaScript:
+function past(h, m, s){
+  //#Happy Coding! ^_^
+  let hourSeconds = h * 3600000
+  let minuteSeconds = m * 60000
+  let secondSeconds = s * 1000
+  return hourSeconds + minuteSeconds + secondSeconds
+}
+15 days agoRefactorDiscuss
+8 kyu
+Reversed Strings
+JavaScript:
+function solution(str){
+  let array = str.split('')
+  let reverseArray = []
+  array.forEach((x, i) => reverseArray[i] = array[array.length - i - 1])
+  return reverseArray.join('')
+}
+16 days agoRefactorDiscuss
+8 kyu
+Square(n) Sum
+JavaScript:
+function squareSum(numbers){
+  if (numbers.length === 0) {
+    return 0
+  }
+  let initialNumLength = numbers.length
+  for (let i = 0; i < initialNumLength; i++) {
+    numbers[i] = numbers[i] ** 2
+  }
+  return numbers.reduce((prevVal, currVal) => prevVal + currVal)
+}
+16 days agoRefactorDiscuss
+8 kyu
+Fake Binary
+JavaScript:
+function fakeBin(x){
+  let arrayX = x.split('')
+  for (let i = 0; i < arrayX.length; i++) {
+    if (arrayX[i] < 5) {
+      arrayX[i] = 0
+    } else if (arrayX[i] >= 5) {
+      arrayX[i] = 1
+    }
+  }
+  return arrayX.join('')
+}
+17 days agoRefactorDiscuss
+8 kyu
+Grasshopper - Summation
+JavaScript:
+var summation = function (num) {
+  // Code here
+  let count = 0
+  for (let i = 0; i <= num; i++) {
+    count += i
+  }
+  return count
+}
+17 days agoRefactorDiscuss
+8 kyu
+Find the smallest integer in the array
+JavaScript:
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    function reducer(previous, current, index, args) {
+      const returns = previous < current ? previous : current
+      return returns
+    }
+    return args.reduce(reducer)
+  }
+}
+19 days agoRefactorDiscuss
+8 kyu
+Convert a String to a Number!
+JavaScript:
+var stringToNumber = function(str){
+  // put your code here
+  return Number(str);
+}
+19 days agoRefactorDiscuss
+8 kyu
+Opposites Attract
+JavaScript:
+function lovefunc(flower1, flower2){
+    let flower1Remainder = flower1 % 2
+    let flower2Remainder = flower2 % 2
+    if (flower1Remainder && !flower2Remainder) {
+        return true
+    } else if (!flower1Remainder && flower2Remainder) {
+        return true
+    } else {
+        return false
+    }
+}
+20 days agoRefactorDiscuss
