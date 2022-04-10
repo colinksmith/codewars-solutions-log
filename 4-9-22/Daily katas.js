@@ -22,11 +22,15 @@
 // If you make it, return "Alive!", if not, return "Shark Bait!".
 
 function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
-  if () {
-    
-  } else if (sharkDistance / sharkSpeed > pontoonDistance / youSpeed) {
-      return 'Shark Bait!'
-  } else {
+  if (dolphin) {
+    if (sharkDistance / sharkSpeed * 2 > pontoonDistance / youSpeed) {
       return 'Alive!'
+    } else {
+        return 'Shark Bait!'
+    }
+  } else if (sharkDistance / sharkSpeed > pontoonDistance / youSpeed) {
+      return 'Alive!'
+  } else {
+      return 'Shark Bait!'
   }
 }
