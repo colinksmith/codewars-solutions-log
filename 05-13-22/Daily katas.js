@@ -220,3 +220,21 @@ function bloodAlcoholContent(drinks, weight, sex, time){
     bac = ((drinks.ounces * drinks.abv) * 5.14 / weight * sexConstant) - (.015 * time)
     return +bac.toFixed(4);
 }
+
+// Wilson primes
+// Wilson primes satisfy the following condition. Let P represent a prime number.
+
+// Then ((P-1)! + 1) / (P * P) should give a whole number.
+
+// Your task is to create a function that returns true if the given number is a Wilson prime.
+
+function amIWilson(p) {
+    function factorial(x) {
+        return x <= 1 ? 1 : x * factorial(x-1);
+      }
+    if (((factorial(p-1) + 1) / (p * p)) % 1 === 0){
+        return true
+    } else {
+        return false
+    }
+}
