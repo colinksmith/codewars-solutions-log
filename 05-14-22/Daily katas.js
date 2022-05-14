@@ -6,3 +6,10 @@
 function validateCode (code) {
     return String(code)[0] === '1' || String(code)[0] === '2' || String(code)[0] === '3' ? true : false
 }
+
+// Regexp Basics - is it a digit?
+
+// Implement String#digit? (in Java StringUtils.isDigit(String)), which should return true if given object is a digit (0-9), false otherwise.
+String.prototype.digit = function() {
+    return this <= '9' && this >= '0' && this.length == 1
+};
