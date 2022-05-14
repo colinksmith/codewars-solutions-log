@@ -140,3 +140,41 @@ function aliasGen(first, sur){
         return (firstName[first[0].toUpperCase()] + ' ' + surname[sur[0].toUpperCase()] )
     } else {return "Your name must start with a letter from A - Z."}
 }
+
+// Count words
+// Can you implement a function that will return number of words in a string?
+
+// You have to ensure that spaces in string is a whitespace for real.
+
+// Let's take a look on some examples:
+
+// countWords("Hello"); // returns 1 as int
+// countWords("Hello, World!") // returns 2
+// countWords("No results for search term `s`") // returns 6
+// countWords(" Hello") // returns 1
+// // ... and so on
+// What kind of tests we made for your code:
+
+// Function have to count words and not spaces. You have to be sure that you doing it right
+// Empty string has no words.
+// String with spaces around should be trimmed.
+// Non-whitespace (ex. breakspace, unicode chars) should be treated as a delimiter
+// Doublecheck that words with chars like -, ', ` are counted right.
+
+function countWords(str) {
+    let keyArray = ["'", '-', '`', '&']
+    let count = 0
+    let inWord = false
+    let strArray = str.split('')
+    strArray = strArray.map(x => x.toLowerCase())
+    for (let i = 0; i < strArray.length; i++) {
+        if ((keyArray.includes(strArray[i]) || strArray[i] >= 'a' && strArray[i] <= 'z' || strArray[i] >= '0' && strArray[i] <= '9')) {
+            inWord = true
+        } else if (inWord === true){
+            count++
+            inWord = false
+        }
+    }
+    if (inWord === true) count++ 
+    return count
+}
