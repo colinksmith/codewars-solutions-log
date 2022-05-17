@@ -63,3 +63,25 @@ function testEven(n) {
 function hexToDec(hexString){
     return parseInt(hexString, 16)
 }
+
+// No zeros for heros
+// Numbers ending with zeros are boring.
+
+// They might be fun in your world, but not here.
+
+// Get rid of them. Only the ending ones.
+
+// 1450 -> 145
+// 960000 -> 96
+// 1050 -> 105
+// -1050 -> -105
+// Zero alone is fine, don't worry about it. Poor guy anyway
+
+function noBoringZeros(n) {
+    let nSplit = String(n).split('')
+    while (nSplit[nSplit.length - 1] === '0') {
+        n = n / 10
+        nSplit.pop()
+    }
+    return n
+}
