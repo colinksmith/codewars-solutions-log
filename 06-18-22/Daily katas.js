@@ -28,25 +28,5 @@ const flip=(d, a)=>{
     }
 }
 
-// Grasshopper - Basic Function Fixer
-// DESCRIPTION:
-// Fix the function
-// I created this function to add five to any number that was passed in to it and return the new value. It doesn't throw any errors but it returns the wrong number.
 
-// Can you help me fix the function?
 
-function addFive(num) {
-    var total = num + 5
-    return total
-}
-
-// Enumerable Magic #25 - Take the First N Elements
-// Create a function that accepts a list/array and a number n, and returns a list/array of the first n elements from the list/array.
-
-// If you need help, here's a reference:
-
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
-
-function take(arr, n) {
-    return arr.slice(0, n)
-}
