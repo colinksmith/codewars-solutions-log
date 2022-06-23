@@ -49,3 +49,42 @@ function  calculateAge(a, b) {
 }
     
 
+
+
+//Color Ghost
+//
+//Color Ghost
+//Create a class Ghost
+//Ghost objects are instantiated without any arguments.
+//Ghost objects are given a random color attribute of "white" or "yellow" or "purple" or "red" when instantiated
+//ghost = new Ghost();
+//ghost.color //=> "white" or "yellow" or "purple" or "red"
+//
+//ghost = new Ghost()
+//ghost.color #=> "white" or "yellow" or "purple" or "red"
+//
+//ghost = Ghost.new
+//ghost.color  #=> "white" or "yellow" or "purple" or "red"
+//
+//ghost = Ghost()
+//ghost.color  #=> "white" or "yellow" or "purple" or "red"
+//
+//Ghost ghost = new Ghost();
+//ghost.getColor(); //=> "white" or "yellow" or "purple" or "red"
+//
+//Ghost ghost = new Gost();
+//ghost.GetColor(); // => "white" or "yellow" or "purple" or "red"
+//
+
+class Ghost {
+    constructor(){
+        this.colorKey = {
+            1: 'white',
+            2: 'yellow',
+            3: 'purple',
+            4: 'red',
+        }
+        this.random = Math.ceil(Math.random() * 4)
+        this.color = this.colorKey[this.random]
+    }
+};
