@@ -31,6 +31,7 @@ async function scrape() {
         }
         description += `\n//${childList[i].textContent}`
     }
+    description += '\n\n'
     return description
    }, element2Parent)
    // console.log(kataTitle)
