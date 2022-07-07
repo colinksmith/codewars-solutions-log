@@ -618,3 +618,20 @@ function odds(values){
   // arrow it
   return values.filter( (val)=> val % 2 === 1);
 }
+
+//Find Nearest square number
+//
+//Your task is to find the nearest square number, nearest_sq(n), of a positive integer n.
+//Goodluck :)
+//Check my other katas:
+//Alphabetically ordered 
+//Case-sensitive! 
+//Not prime numbers 
+
+function nearestSq(n){
+  const highSquare = Math.ceil(Math.sqrt(n)) ** 2
+  const lowSquare = Math.floor(Math.sqrt(n)) ** 2
+  const highDiff = Math.abs(n - highSquare)
+  const lowDiff = Math.abs(n - lowSquare)
+  return highDiff < lowDiff ? highSquare : lowSquare
+}
