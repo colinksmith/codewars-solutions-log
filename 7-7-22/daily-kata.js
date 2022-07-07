@@ -570,3 +570,38 @@ var cubeChecker = function(volume, side){
   if (volume < 1 || side < 1) return false
   return Math.cbrt(volume) === side
 };
+
+//Grasshopper - Combine strings
+//
+//Combine strings function
+//Create a function named combineNames that accepts two parameters (first and last name). The function should return the full name.
+//Example: 
+//combineNames('James', 'Stevens')
+//
+//combineNames 'James', 'Stevens'
+//
+//combine_names('James', 'Stevens')
+//
+//combine_names('James', 'Stevens')
+//
+//combineNames "James"  "Stevens"
+//
+//CombineNames("James", "Stevens")
+//
+//returns:
+//'James Stevens'
+//
+//'James Stevens'
+//
+//'James Stevens'
+//
+//'James Stevens'
+//
+//"James Stevens"
+//
+//"James Stevens"
+//
+
+function combineNames(first, last){
+  return `${first} ${last}`
+}
