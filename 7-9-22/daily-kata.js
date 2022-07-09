@@ -37,3 +37,11 @@ function guessBlue(blueStart, redStart, bluePulled, redPulled) {
     const currentRed = redStart - redPulled
     return currentBlue / (currentBlue + currentRed)
   }
+
+//Parse float
+//
+//Write function parseFloat which takes an input and returns a number or Nothing if conversion is not possible.
+
+function parseF(s) {
+    return parseFloat(s) === 0 ? 0 : parseFloat(s) || null
+  }
