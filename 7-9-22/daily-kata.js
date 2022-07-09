@@ -86,3 +86,18 @@ function closeCompare(a, b, margin = 0){
 function orderOperations () {
     return (2 + 2) * (2 + 2) * 2
   }
+
+//ASCII Total
+//
+//You'll be given a string, and have to return the sum of all characters as an int. The function should be able to handle all ASCII characters.
+//examples:
+//uniTotal("a") == 97
+//uniTotal("aaa") == 291
+
+function uniTotal (string) {
+    let sum = 0
+    string.split('').forEach(letter => {
+      sum += letter.charCodeAt()
+    })
+    return sum
+  }
