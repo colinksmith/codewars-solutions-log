@@ -272,3 +272,18 @@ function howManySmaller(arr,n){
     return arr.map(ele => ele.toFixed(2)).reduce((prev, curr) => curr < n ? prev + 1 : prev,0)
   }
   
+
+//Classy Extentions
+//
+//Classy Extensions
+//extends
+//Task
+//'Mr Whiskers meows.'
+//The name attribute is passed with this.name (JS), @name (Ruby) or self.name (Python).
+//Reference: JS, Ruby, Python.
+
+class Cat extends Animal {
+    speak() {
+      return `${this.name} meows.`
+    }
+  }
