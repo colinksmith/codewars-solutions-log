@@ -9,7 +9,7 @@ const filePath = `${todayDate}/daily-kata.js`
 
 function generateTodayDate() {
     let date = new Date()
-    let returnDate = `${00 + date.getMonth() + 1}-${date.getDate()}-${String(date.getFullYear()).slice(-2)}`
+    let returnDate = `${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}-${String(date.getFullYear()).slice(-2)}`
     return returnDate
 }
 
