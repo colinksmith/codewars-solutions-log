@@ -367,3 +367,14 @@ function magNumber(info){
     return Math.ceil(info[1] * 3 / key[info[0]])
   }
   
+
+//!a == a ?!
+//
+//You task to pass only this tests :
+//
+//a == false
+//!a == false
+//a == !a
+//
+
+const a = '0'
