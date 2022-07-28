@@ -681,3 +681,24 @@ const circular = {
 //
 //
 
+
+//Vowel Count
+//
+//Return the number (count) of vowels in the given string. 
+//We will consider a, e, i, o, u as vowels for this Kata (but not y).
+//The input string will only consist of lower case letters and/or spaces.
+
+
+function getCount(str) {
+    const key = {
+      a: 0,
+      e: 0,
+      i: 0,
+      o: 0,
+      u: 0,
+    }
+    return str.split('').reduce((prev, curr) =>{
+      if (curr in key) return prev += 1
+      else return prev
+    },0)
+  }
