@@ -411,3 +411,20 @@ function arr2bin(arr){
       return output.toString(2) 
       }
   }
+
+//Lexical this
+//
+//Lexical this
+//Output
+//Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
+var Person = function(){
+    var person = {
+      _name: "Leroy",
+      _friends: [],
+      fillFriends(f) {
+        this._friends = f
+      }
+    }
+    return person;
+  }
