@@ -26,10 +26,12 @@ async function scrape() {
     let childList = Array.from(elementParent.children)
     let description = ''
     for (let i = 0; i < childList.length; i++){
-        if (childList[i].textContent.includes('\n')){
-            childList[i].textContent = childList[i].textContent.replaceAll('\n', '\n//')
+        if(childList[i].style.display !== 'none') {
+            if (childList[i].textContent.includes('\n')){
+                childList[i].textContent = childList[i].textContent.replaceAll('\n', '\n//')
+            }
+            description += `\n//${childList[i].textContent}`
         }
-        description += `\n//${childList[i].textContent}`
     }
     description += '\n\n'
     return description
