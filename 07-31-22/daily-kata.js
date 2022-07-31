@@ -13,3 +13,7 @@
 //Output string must be two numbers separated by a single space, and highest number is first.
 //
 
+function highAndLow(numbers){
+    numbers = numbers.split(' ').map(x => Number(x))
+    return `${Math.max(...numbers)} ${Math.min(...numbers)}`
+  }
