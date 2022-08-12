@@ -183,3 +183,14 @@ function addBinary(a,b) {
     const sum = a + b
     return sum.toString(2)
 }
+
+//Is this a triangle?
+//
+//Implement a function that accepts 3 integer values a, b, c. The function should return true if a triangle can be built with the sides of given length and false in any other case.
+//(In this case, all triangles must have surface greater than 0 to be accepted).
+
+function isTriangle(a,b,c){
+    let array = [a,b,c].sort((a,b) => a - b)
+    if(array[0] + array[1] > array[2]) return true
+    return false
+ }
