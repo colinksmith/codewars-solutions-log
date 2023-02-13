@@ -37,3 +37,64 @@ function arrayDiff(a, b) {
     }
   })
 }
+
+//Primes in numbers
+//
+//Given a positive number n > 1 find the prime factor decomposition of n.
+//The result will be a string with the following form :
+// "(p1**n1)(p2**n2)...(pk**nk)"
+//
+//with the p(i) in increasing order and n(i) empty if
+//n(i) is 1.
+//Example: n = 86240 should return "(2**5)(5)(7**2)(11)"
+//
+// p: number
+// r: primes as string
+// e: 86240 should return "(2**5)(5)(7**2)(11)"
+// p:
+// take number, divide by lowest prime, 
+//   add that prime to a list
+// stop when running number is prime
+//   add that prime to a list
+// return list
+  
+function primeFactors(n){
+    let factors = []
+    let outputArr = []
+    let outputFormatted = ''
+    let nextFactor = findNextFactor(n)
+    while (nextFactor !== 1){
+      factors.push(nextFactor)
+      n /= nextFactor
+      nextFactor = findNextFactor(n)
+    }
+    let count = factors.reduce((prev, curr) => {
+      if (prev[String(curr)]){
+        prev[String(curr)]++
+      } else {
+        prev[String(curr)] = 1
+      }
+      
+      return prev
+    }, {})
+    for (num in count) {
+      if (count[num] > 1) {
+        outputArr.push(`${num}**${count[num]}`)
+      } else {
+        outputArr.push(`${num}`)
+      }
+    }
+    outputArr.forEach(ele => {
+      outputFormatted += `(${ele})`
+    })
+    return outputFormatted
+  }
+  function findNextFactor(num){
+    for(let i = 2; i <= Math.sqrt(num); i++){
+      if (num % i === 0){
+        return i
+      }
+    }
+    return num
+  }
+  
