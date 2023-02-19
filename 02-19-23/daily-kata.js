@@ -32,3 +32,29 @@ function hydrate(s) {
   // search string for any numbers
   // sum numbers
   // return string of numbers of glasses of water
+
+
+//Inspiring Strings
+//When given a string of space separated words, return the word with the longest length. If there are multiple words with the longest length, return the last instance of the word with the longest length.
+//
+// Example:
+//
+// 'red white blue' //returns string value of white
+//
+// 'red blue gold' //returns gold
+
+function longestWord(stringOfWords){
+  let longWordIndex = 0
+  let length = 0
+  let arr = stringOfWords.split(' ')
+  //find word with longest length
+  arr.forEach((word, index) => {
+      if (word.length >= length) {
+        length = word.length
+        longWordIndex = index        
+      }
+    })
+  return arr[longWordIndex]
+}
+longestWord('a b c d e fgh')
+longestWord('red blue grey')
