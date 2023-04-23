@@ -13,3 +13,17 @@
 //
 //Good luck and happy coding!
 
+class Dictionary {
+    constructor() {
+      this.list = {}
+    }
+    
+    newEntry(key, value) {
+      this.list[key] = value
+    }
+    
+    look(key) {
+      if (this.list[key]) return this.list[key]
+      return `Can't find entry for ${key}`
+    }
+  }
